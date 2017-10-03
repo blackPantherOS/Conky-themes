@@ -1,0 +1,54 @@
+#This conky art is by Qaisar Nawaz
+# Conky settings #
+background no
+update_interval 3
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_title 
+own_window_colour ffffff
+own_window_transparent yes
+#own_window_argb_visual yes
+#own_window_argb_value 200
+
+minimum_size 232 129
+maximum_width 232 129
+# Alignment #
+alignment br
+gap_x 0
+gap_y 0
+
+border_inner_margin 0
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont ubuntu:size=9
+
+# Color scheme #
+default_color 999999
+
+color1 666666
+color2 ffffff
+color3 9cff00
+color4 000000
+color5 FFC000
+color6 a90000
+color7 aaf200
+
+TEXT
+${image ./bw.png -p}
+${voffset 60}${alignr 46}${font ubuntu:bold:pixelsize=28}${color2}${time %H}:${color}${time %M}$font$color
+${voffset -15}
+${alignr 12}${font ubuntu:bold}${color3}${time %d}$font${color} ${time  %B} $font${color2}${time %A}${voffset -30}

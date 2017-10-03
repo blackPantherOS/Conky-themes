@@ -1,0 +1,50 @@
+# conky made by qaisar nawaz
+# check for more stuff like this go to http://qaisarnawaz.deviantart.com/gallery/
+# Conky settings #
+background no
+update_interval 10
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_title 
+own_window_colour ffffff
+own_window_transparent yes
+#own_window_argb_visual yes
+#own_window_argb_value 255
+
+minimum_size 97 100
+
+# Alignment #
+alignment tr
+gap_x 60
+gap_y 210
+
+border_inner_margin 0
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont comic sans ms:size=9
+override_utf8_locale yes
+# Color scheme #
+default_color 000000
+
+color1 ffffff
+color2 AAAAAA
+color3 DDDDDD
+color4 e3e7ee
+
+TEXT
+${image ./conky_icons/datebox.png -s 100x100}${alignc -1}${color1}${voffset 12}${time %A}
+${voffset -14}${alignc 28}${font comic sans ms:bold:size=44}${color4}${time %d}$color$font${voffset -40}

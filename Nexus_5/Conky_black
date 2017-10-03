@@ -1,0 +1,39 @@
+﻿background yes
+use_xft yes
+xftfont shrapnel:size=9
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_colour FFFFFF
+own_window_argb_visual no
+own_window_argb_value 100
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 400 400
+#default_bar_size 60 8
+maximum_width 400
+maximum_length 400
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color c6c4c7
+default_shade_color 000000
+default_outline_color 0054a3
+alignment top_left
+gap_x 465
+gap_y 55
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+
+
+
+TEXT
+${image xxl.png -p 7,18 -s 275x275}
+${voffset 65}${goto 39}${font Anabelle Script:size=80} ${time %I:%M}${font Anabelle Script:size=18}${time %P}${font}
+${voffset 18}${goto 60}${font Anabelle Script:size=30} ${time %A %B %d }

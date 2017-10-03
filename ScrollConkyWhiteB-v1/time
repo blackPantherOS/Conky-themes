@@ -1,0 +1,50 @@
+# conky package by qaisar nawaz - all rights reserved.
+# for more stuff like this goto : http://qaisarnawaz.deviantart.com/gallery/
+# Conky settings #
+background no
+update_interval 2
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_title 
+own_window_colour ffffff
+own_window_transparent yes
+#own_window_argb_visual yes
+#own_window_argb_value 255
+
+minimum_size 233 93
+maximub_width 233
+# Alignment #
+alignment tr
+gap_x 60
+gap_y 80
+
+border_inner_margin 0
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont roboto light:size=9
+# Color scheme #
+default_color ffffff
+
+color1 000000
+color2 191919
+
+TEXT
+${image ./conky_icons/c1.png -p -1,-1 -s 236x96}${voffset 1}${alignc 75}${time %A}
+${voffset -8}${alignc 97}${color2}${font roboto light:size=40}${time %d}$font
+${voffset 4}${color}${alignc 76}${time  %B}
+$font${voffset -74}
+${alignr 60}${font roboto light:pixelsize=18}${color1}${time %r}$font

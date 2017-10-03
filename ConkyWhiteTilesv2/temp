@@ -1,0 +1,54 @@
+# Conky settings #
+background no
+update_interval 6
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_title 
+own_window_colour grey
+own_window_argb_visual yes
+own_window_argb_value 200
+
+minimum_size 100 100
+
+# Alignment #
+alignment tr
+gap_x 60
+gap_y 213
+
+border_inner_margin 15
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont Open Sans Light:size=9
+
+# Color scheme #
+default_color 333333
+
+color1 0099CC
+color2 9933CC
+color3 669900
+color4 FF8800
+color5 CC0000
+color6 AAAAAA
+color7 DDDDDD
+color8 FFFFFF
+color9 000000
+TEXT
+${voffset 0}${font Open Sans Light:size=40}$alignc${offset 8}${hwmon temp 1}°$font$color
+${image ./conky_icons/temp.png -p 0,12 -s 35x35}
+${alignc}System Temprature
+
+${voffset -41}

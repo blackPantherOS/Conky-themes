@@ -1,0 +1,60 @@
+# conky package by qaisar nawaz
+# Conky settings #
+background no
+update_interval 600
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_title 
+own_window_colour bebebe
+own_window_argb_visual yes
+own_window_argb_value 205
+
+minimum_size 263 110
+maximum_width 263
+# Alignment #
+alignment tr
+gap_x 341
+gap_y 75
+
+border_inner_margin 10
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont Open Sans Light:size=10
+
+override_utf8_locale yes
+
+imlib_cache_size 0
+
+# Color scheme #
+default_color 333333
+
+color1 0099CC
+color2 9933CC
+color3 669900
+color4 FF8800
+color5 CC0000
+color6 AAAAAA
+color7 DDDDDD
+
+TEXT
+${color1}Now$color${execi 300 curl -s "http://weather.yahooapis.com/forecastrss?w=22722956&u=c" -o ~/.cache/weather.xml}
+${alignr 10}${voffset -27}${font Open Sans Light:size=11}${voffset 10}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "text=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | tr '[a-z]' '[A-Z]'}${font}
+${voffset 0}${offset 30}${font Open Sans Light:size=30}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°${font}${voffset -14}
+${execi 300 cp -f ./conky_icons/$(grep "yweather:condition" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*").png ~/.cache/weather.png}${image ~/.cache/weather.png -p 160,35 -s 60x60}
+${image ./conky_icons/wind.png -p 17,76 -s 15x15}${offset 40}${execi 300 grep "yweather:wind" ~/.cache/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${execi 300 grep "yweather:units" ~/.cache/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}
+${image ./conky_icons/humidity.png -p 17,96 -s 15x15}${offset 40}${execi 300 grep "yweather:atmosphere" ~/.cache/weather.xml | grep -o "humidity=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}%${voffset -58}
+

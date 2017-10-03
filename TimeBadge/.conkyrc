@@ -1,0 +1,52 @@
+# Conky settings #
+background no
+update_interval 30
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_title 
+own_window_colour ffffff
+own_window_transparent yes
+#own_window_argb_visual yes
+#own_window_argb_value 255
+
+minimum_size 200 200
+# Alignment #
+alignment tr
+gap_x 60
+gap_y 80
+
+border_inner_margin 0
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont roboto:size=12
+
+# Color scheme #
+default_color AAF200
+
+color1 0099CC
+color2 9933CC
+color3 669900
+color4 FF8800
+color5 CC0000
+color6 AAAAAA
+color7 DDDDDD
+
+TEXT
+${image ./conky_icons/circle.png -s 190x190}$alignc${voffset 36}${offset -8}${time %A}
+${voffset -6}${offset 17}${font roboto:bold:pixelsize=70}${time %H}${voffset -8}${font roboto light:pixelsize=60}${color6}${offset -5}:$color${offset -5}${voffset 4}${time %M}$font$color
+${voffset 8}$alignc${offset -8}${color4}${time %d}$font$color ${time  %B}
+

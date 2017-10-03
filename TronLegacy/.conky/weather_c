@@ -1,0 +1,49 @@
+# Conky settings #
+background no
+update_interval 2
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_title 
+own_window_colour FFFFFF
+own_window_transparent yes
+own_window_argb_visual no
+own_window_argb_value 0
+
+minimum_size 200 100
+
+# Alignment #
+alignment top_right
+gap_x 50
+gap_y 190
+
+border_inner_margin 0
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont future:size=9
+override_utf8_locale yes
+
+imlib_cache_size 0
+
+# Color scheme #
+default_color 66eafb
+color1 fa4f6a
+
+
+TEXT
+${image ./conky_icons/circle2.png -s 200x100}${texeci 1300 curl -s "http://weather.yahooapis.com/forecastrss?w=22722956&u=c" -o ~/.cache/weather.xml}${voffset 10}${offset 10}Current Weather
+${voffset 13}${goto 20}${font future:size=24}${execi 1300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${font future:size=10}${voffset -10}o${voffset 20}${font}
+${execi 1300 cp -f ./conky_icons/$(grep "yweather:condition" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*").png ~/.cache/weather.png}${image ~/.cache/weather.png -p 138,28 -s 40x40}${color}${alignr 26}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "text=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | tr '[a-z]' '[A-Z]'}

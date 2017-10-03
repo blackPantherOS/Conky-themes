@@ -1,0 +1,56 @@
+# Conky settings #
+background no
+update_interval 900
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_title 
+own_window_colour grey
+own_window_argb_visual yes
+own_window_argb_value 200
+
+minimum_size 549 85
+maximum_width 549
+
+# Alignment #
+alignment tr
+gap_x 55
+gap_y 474
+
+border_inner_margin 10
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont Open Sans Light:size=10
+
+override_utf8_locale yes
+
+imlib_cache_size 0
+
+# Color scheme #
+default_color 333333
+
+color1 0099CC
+color2 9933CC
+color3 669900
+color4 FF8800
+color5 CC0000
+color6 666666
+color7 DDDDDD
+
+TEXT
+${voffset -2}${offset 30}${color6}${font Open Sans Light:size=12}WEB UPD ${color5}8$color$font
+${exec python ./webupd8.py}${image ~/.conky/conky_icons/web_upd8.png -p 0,0 -s 20x20}
+${voffset -28}

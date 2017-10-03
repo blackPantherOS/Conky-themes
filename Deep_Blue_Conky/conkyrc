@@ -1,0 +1,46 @@
+# -- Conky settings_by_giancarlo64 -- #
+background no
+update_interval 1
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+imlib_cache_size 0
+
+own_window_type normal
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
+own_window yes
+own_window_transparent yes
+own_window_argb_visual yes
+
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 450 180
+maximum_width 450
+
+alignment tr
+gap_x 0
+gap_y 50
+
+# -- Graphics settings -- #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+
+# -- Lua load -- #
+lua_load ./1text.lua 
+lua_draw_hook_pre draw_text
+
+#at least one line (empty or not) after TEXT
+TEXT
+

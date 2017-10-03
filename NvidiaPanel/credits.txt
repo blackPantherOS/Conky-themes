@@ -1,0 +1,7 @@
+
+Original Theme by Tony George (teejee2008@gmail.com)
+http://teejeetech.blogspot.in/2013/05/my-conky-themes-2.html
+
+This theme requires the latest proprietary drivers from the NVIDIA website in order to work properly.
+
+
