@@ -1,1 +1,1 @@
-http://gnome-look.org/content/show.php?content=141411
+http://github.com/blackPantherOS/Conky-themes.git

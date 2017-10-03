@@ -75,7 +75,7 @@ settings_table = {
     },
         {
         name='downspeedf',
-        arg='eth0',
+        arg='wlp2s0',
         max=210,
         bg_colour=0xffffff,
         bg_alpha=0.2,
@@ -89,7 +89,7 @@ settings_table = {
     },
         {
         name='upspeedf',
-        arg='eth0',
+        arg='wlp2s0',
         max=100,
         bg_colour=0xffffff,
         bg_alpha=0.2,
