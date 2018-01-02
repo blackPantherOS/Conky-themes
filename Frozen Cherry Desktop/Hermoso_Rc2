@@ -9,17 +9,17 @@ temperature_unit celsius
 double_buffer yes
 no_buffers yes
 text_buffer_size 2048
-alignment top_right
-gap_x -25
-gap_y 35
+alignment middle_middle
+gap_x 0
+gap_y -100
 minimum_size 550 550
 maximum_width 550
 own_window yes
 own_window_type normal
-own_window_transparent yes
+own_window_transparent no
 own_window_argb_visual yes
 own_window_argb_value 0
-own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
 border_inner_margin 0
 border_outer_margin 0
 
@@ -37,13 +37,13 @@ xftalpha 1
 uppercase yes
 
 default_color D6D5D4
-#E87E3C
+#8A0D1C
 own_window_colour 000000
 TEXT
 
 
-${goto 35}${color E87E3C}${font Feena Casual:size=100}${time %I }${font Feena Casual:size=45}${color D6D5D4}${time %A}#${color yellow}
-${color D6D5D4}${goto 35}${voffset 55}${font Feena Casual:size=20}${time %d} ${font Feena Casual:size=45}${voffset -15}${time %B} ${font Feena Casual:size=20}${goto 65}${voffset 34}${time %Y}${font Feena Casual:size=100}${goto 155}${voffset -54}${color E87E3C}${time %M}${font Feena Casual:size=22}${color D6D5D4} ${time %P}
+${goto 35}${color 8A0D1C}${font Feena Casual:size=100}${time %I }${font Feena Casual:size=65}${color 000000}${time %A}#${color yellow}
+${color 000000}${goto 35}${voffset 55}${font Feena Casual:size=22}${time %d} ${font Feena Casual:size=65}${voffset -15}${time %B} ${font Feena Casual:size=22}${goto 65}${voffset 34}${time %Y}${font Feena Casual:size=100}${goto 155}${voffset -54}${color 8A0D1C}${time %M}${font Feena Casual:size=25}${color 000000} ${time %P}
 
 
 

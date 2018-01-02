@@ -9,14 +9,14 @@ temperature_unit celsius
 double_buffer yes
 no_buffers yes
 text_buffer_size 2048
-alignment top_middle
-gap_x 200
+alignment top_left
+gap_x 120
 gap_y 35
 minimum_size 550 550
 maximum_width 550
 own_window yes
 own_window_type normal
-own_window_transparent no
+own_window_transparent yes
 own_window_argb_visual yes
 own_window_argb_value 0
 own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below

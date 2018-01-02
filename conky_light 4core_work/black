@@ -104,5 +104,5 @@ ${font Michroma:size=18}${goto 118}${color1}${voffset -4}${time %H}:${time %M}
 ${font Michroma:size=8}${color0}${goto 296}${voffset 18}BATTERIE
 ${font Play:size=8}${color0}${goto 278}${voffset 4}${color1}${battery_percent BAT1}%${endif}${endif}
 #${font Play:normal:size=7}${goto 180}Uptime${color1}${alignr 100}${uptime_short}
-${font Michroma:size=11}${color0}${voffset 150}${alignr 150}${pre_exec cat /etc/issue.net}  ${machine}
+${font Michroma:size=11}${color0}${voffset 150}${alignr 150}${exec cat /etc/issue.net}  ${machine}
 #${execpi 53 $HOME/conky/nagios.sh}

@@ -18,8 +18,8 @@ temperature_unit fahrenheit
 # Window specifications #
 own_window yes
 own_window_type normal
-own_window_transparent no
-own_window_transparent no
+own_window_transparent yes
+own_window_transparent yes
 own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
 
 border_inner_margin 0
@@ -28,8 +28,8 @@ border_outer_margin 5
 minimum_size 250 300
 maximum_width 250
 
-alignment bottom_right
-gap_x 10
+alignment middle_right
+gap_x 0
 gap_y 0
 
 # Graphics settings #
@@ -53,7 +53,7 @@ default_color FFFFFF
 lua_load ./clock01_rings.lua
 lua_draw_hook_pre clock_rings
 
-own_window_argb_value 153
+own_window_argb_value 0
 own_window_argb_visual yes
 own_window_colour 000000
 TEXT
@@ -121,7 +121,7 @@ ${top name 8}${goto 115}${top pid 8}${goto 160}${top cpu 8}${goto 205}${top mem 
 #----------------------------------------------------------------------------------------------------------------------------------------
 ${color 0ABFFF}${voffset 2}${hr 1}${voffset 5}
 ${color 0ABFFF}Hostname:$color${alignr}${nodename}
-${color 0ABFFF}OS:$color${alignr}${pre_exec cat /etc/issue.net} $machine
+${color 0ABFFF}OS:$color${alignr}${exec cat /etc/issue.net} $machine
 ${color 0ABFFF}Kernel:$color${alignr}${kernel}$color
 #----------------------------------------------------------------------------------------------------------------------------------------
 #						Logging

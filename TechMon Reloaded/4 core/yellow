@@ -64,7 +64,7 @@ lua_draw_hook_pre main_rings
 TEXT
 ${image ./04.png -p 0,0 -s 248x750}
 ${voffset 4} ${goto 22} ${font Future:size=11}${color ACE8E8}SISTEMA OPERATIVO: GNU/${sysname}
-${voffset 0} ${goto 37} ${font Future:size=11}${color ACE8E8}Distro: ${pre_exec lsb_release -d | cut -f 2| tr "[:upper:]" "[:lower:]"}
+${voffset 0} ${goto 37} ${font Future:size=11}${color ACE8E8}Distro: ${exec lsb_release -d | cut -f 2| tr "[:upper:]" "[:lower:]"}
 ${voffset 0} ${goto 37} ${font Future:size=11}${color ACE8E8}KERNEL: ${kernel}
 ${voffset 0} ${goto 37} ${font Future:size=14}${color ACE8E8}Cinnamon: 1.8
 ${voffset 196} ${goto 14} ${font Future:size=10.4}${color ACE8E8}MEMORIA RAM: ${memmax}

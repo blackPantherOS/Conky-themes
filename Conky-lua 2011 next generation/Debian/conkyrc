@@ -84,6 +84,6 @@ ${color FFFFFF}${goto 130}${downspeed eth0}
 ${color FFFFFF}${goto 130}${upspeed eth0}
 
 ${color FF0055}${font Neuropolitical:size=8}${alignr}${nodename}
-${color FF0055}${font Neuropolitical:size=8}${alignr}${pre_exec cat /etc/issue.net}  $machine
+${color FF0055}${font Neuropolitical:size=8}${alignr}${exec cat /etc/issue.net}  $machine
 ${color FF0055}${font Neuropolitical:size=8}${alignr}Kernel: ${kernel}
 ${hr}
